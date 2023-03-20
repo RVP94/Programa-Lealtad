@@ -1,6 +1,19 @@
 # Gradle
 - task: AppCenterTest@1
   inputs:
+    appFile: 'C:\AppCenter\APP\programalealtad-release.apk'
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+    frameworkOption: 'uitest'
+    uiTestBuildDirectory: 'C:\AppCenter\UITest1\UITest1\bin\Debug'
+    credentialsOption: 'inputs'
+    username: 'ruben_vp94-live.com'
+    password: 'Cacahuata94*'
+    appSlug: 'KOF-PL/set-device-4ff3e1'
+    devices: '4ff3e1'
+    localeOption: 'en_US'
+    skipWaitingForResults: true
+- task: AppCenterTest@1
+  inputs:
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'appium'
     credentialsOption: 'serviceEndpoint'
